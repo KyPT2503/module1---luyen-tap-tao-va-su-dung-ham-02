@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+    </style>
+</head>
+<body>
+<script>
+    function checkNumber(value)
+    {
+        let number=+value;
+        if(isNaN(number)) return false;
+        return true;
+    }
+
+    let a=0,b=1;
+    function swap(x,y)
+    {
+        let tmp=a;
+        a=b;
+        b=tmp;
+    }
+
+    let arr=[1,2,3,4,5];
+    function reverseArr(arr_)
+    {
+        for(let i=0;i<arr_.length/2;i++)
+        {
+            let tmp=arr_[i];
+            arr_[i]=arr_[arr_.length-i-1];
+            arr_[arr_.length-i-1]=tmp;
+        }
+    }
+    console.log(arr);
+    reverseArr(arr);
+    console.log(arr);
+
+    let str='phan the kye';
+    let char='e';
+    function findCharInStr(character,string)
+    {
+        let count=0;
+        for(let i=0;i<string.length;i++)
+        {
+            if(string[i]==character) count+=1;
+        }
+        return count;
+    }
+    console.log(findCharInStr(char,str));
+</script>
+</body>
+</html>
